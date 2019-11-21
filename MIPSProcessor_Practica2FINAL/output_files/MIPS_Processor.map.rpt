@@ -1,0 +1,1133 @@
+Analysis & Synthesis report for MIPS_Processor
+Wed Nov 20 19:43:19 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_Processor
+ 13. Parameter Settings for User Entity Instance: PC_Register:ProgramCounter
+ 14. Parameter Settings for User Entity Instance: ProgramMemory:ROMProgramMemory
+ 15. Parameter Settings for User Entity Instance: Adder32bits:PC_Puls_4
+ 16. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForRTypeAndIType
+ 17. Parameter Settings for User Entity Instance: RegisterFile:Register_File
+ 18. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_Zero
+ 19. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_at
+ 20. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v0
+ 21. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v1
+ 22. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a0
+ 23. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a1
+ 24. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a2
+ 25. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a3
+ 26. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t0
+ 27. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t1
+ 28. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t2
+ 29. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t3
+ 30. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t4
+ 31. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t5
+ 32. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t6
+ 33. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t7
+ 34. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s0
+ 35. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s1
+ 36. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s2
+ 37. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s3
+ 38. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s4
+ 39. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s5
+ 40. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s6
+ 41. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s7
+ 42. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t8
+ 43. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t9
+ 44. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k0
+ 45. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k1
+ 46. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_gp
+ 47. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_sp
+ 48. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_fp
+ 49. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_ra
+ 50. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
+ 51. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
+ 52. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndInmediate
+ 53. Parameter Settings for User Entity Instance: DataMemory:RAM
+ 54. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndALUResult
+ 55. Parameter Settings for User Entity Instance: Adder32bits:Add_ShiftBranch
+ 56. Parameter Settings for User Entity Instance: Multiplexer2to1:Mux_AddBranch
+ 57. Parameter Settings for User Entity Instance: Multiplexer2to1:MuxForJump
+ 58. Parameter Settings for User Entity Instance: Multiplexer2to1:MuxRa
+ 59. Parameter Settings for User Entity Instance: Multiplexer2to1:MuxPC
+ 60. Parameter Settings for User Entity Instance: Multiplexer2to1:MuxPCJR
+ 61. Port Connectivity Checks: "Multiplexer2to1:MuxRa"
+ 62. Port Connectivity Checks: "Multiplexer2to1:MuxForJump"
+ 63. Port Connectivity Checks: "RegisterFile:Register_File|Register:Register_Zero"
+ 64. Port Connectivity Checks: "Adder32bits:PC_Puls_4"
+ 65. Post-Synthesis Netlist Statistics for Top Partition
+ 66. Elapsed Time Per Partition
+ 67. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 20 19:43:19 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; MIPS_Processor                              ;
+; Top-level Entity Name              ; MIPS_Processor                              ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 16,705                                      ;
+;     Total combinational functions  ; 7,593                                       ;
+;     Dedicated logic registers      ; 9,216                                       ;
+; Total registers                    ; 9216                                        ;
+; Total pins                         ; 74                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M16DAF256A7G     ;                    ;
+; Top-level entity name                                            ; MIPS_Processor     ; MIPS_Processor     ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; Sources/SignExtend.v                         ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/SignExtend.v          ;         ;
+; Sources/ShiftLeft2.v                         ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ShiftLeft2.v          ;         ;
+; Sources/RegisterFile.v                       ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v        ;         ;
+; Sources/Register.v                           ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v            ;         ;
+; Sources/ProgramMemory.v                      ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v       ;         ;
+; Sources/PC_Register.v                        ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/PC_Register.v         ;         ;
+; Sources/MUXRegisterFile.v                    ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MUXRegisterFile.v     ;         ;
+; Sources/Multiplexer2to1.v                    ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Multiplexer2to1.v     ;         ;
+; Sources/MIPS_Processor.v                     ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v      ;         ;
+; Sources/DecoderRegisterFile.v                ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v ;         ;
+; Sources/DataMemory.v                         ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v          ;         ;
+; Sources/Control.v                            ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Control.v             ;         ;
+; Sources/ALUControl.v                         ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALUControl.v          ;         ;
+; Sources/ALU.v                                ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v                 ;         ;
+; Sources/Adder32bits.v                        ; yes             ; User Verilog HDL File        ; C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Adder32bits.v         ;         ;
+; /mipsprojects/mipsprocessor/sources/text.dat ; yes             ; Auto-Found Unspecified File  ; /mipsprojects/mipsprocessor/sources/text.dat                               ;         ;
++----------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 16,705    ;
+;                                             ;           ;
+; Total combinational functions               ; 7593      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 7048      ;
+;     -- 3 input functions                    ; 452       ;
+;     -- <=2 input functions                  ; 93        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 7503      ;
+;     -- arithmetic mode                      ; 90        ;
+;                                             ;           ;
+; Total registers                             ; 9216      ;
+;     -- Dedicated logic registers            ; 9216      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 74        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 9216      ;
+; Total fan-out                               ; 58481     ;
+; Average fan-out                             ; 3.45      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                     ; Entity Name         ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+---------------------+--------------+
+; |MIPS_Processor                                  ; 7593 (3)            ; 9216 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 74   ; 0            ; 0          ; |MIPS_Processor                                                         ; MIPS_Processor      ; work         ;
+;    |ALU:ArithmeticLogicUnit|                     ; 440 (440)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU                 ; work         ;
+;    |ALUControl:ArithmeticLogicUnitControl|       ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl          ; work         ;
+;    |Adder32bits:Add_ShiftBranch|                 ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Adder32bits:Add_ShiftBranch                             ; Adder32bits         ; work         ;
+;    |Adder32bits:PC_Puls_4|                       ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Adder32bits:PC_Puls_4                                   ; Adder32bits         ; work         ;
+;    |Control:ControlUnit|                         ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Control:ControlUnit                                     ; Control             ; work         ;
+;    |DataMemory:RAM|                              ; 5701 (5701)         ; 8192 (8192)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|DataMemory:RAM                                          ; DataMemory          ; work         ;
+;    |Multiplexer2to1:MUX_ForReadDataAndInmediate| ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate             ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MuxPCJR|                     ; 55 (55)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Multiplexer2to1:MuxPCJR                                 ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MuxPC|                       ; 93 (93)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Multiplexer2to1:MuxPC                                   ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MuxRa|                       ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|Multiplexer2to1:MuxRa                                   ; Multiplexer2to1     ; work         ;
+;    |PC_Register:ProgramCounter|                  ; 7 (7)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|PC_Register:ProgramCounter                              ; PC_Register         ; work         ;
+;    |ProgramMemory:ROMProgramMemory|              ; 135 (135)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|ProgramMemory:ROMProgramMemory                          ; ProgramMemory       ; work         ;
+;    |RegisterFile:Register_File|                  ; 1025 (0)            ; 992 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile        ; work         ;
+;       |DecoderRegisterFile:Decoder|              ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|DecoderRegisterFile:Decoder  ; DecoderRegisterFile ; work         ;
+;       |MUXRegisterFile:MUXRegister1|             ; 323 (323)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile     ; work         ;
+;       |MUXRegisterFile:MUXRegister2|             ; 654 (654)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile     ; work         ;
+;       |Register:Register_a0|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a0         ; Register            ; work         ;
+;       |Register:Register_a1|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a1         ; Register            ; work         ;
+;       |Register:Register_a2|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a2         ; Register            ; work         ;
+;       |Register:Register_a3|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a3         ; Register            ; work         ;
+;       |Register:Register_at|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_at         ; Register            ; work         ;
+;       |Register:Register_fp|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_fp         ; Register            ; work         ;
+;       |Register:Register_gp|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_gp         ; Register            ; work         ;
+;       |Register:Register_k0|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_k0         ; Register            ; work         ;
+;       |Register:Register_k1|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_k1         ; Register            ; work         ;
+;       |Register:Register_ra|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_ra         ; Register            ; work         ;
+;       |Register:Register_s0|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s0         ; Register            ; work         ;
+;       |Register:Register_s1|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s1         ; Register            ; work         ;
+;       |Register:Register_s2|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s2         ; Register            ; work         ;
+;       |Register:Register_s3|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s3         ; Register            ; work         ;
+;       |Register:Register_s4|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s4         ; Register            ; work         ;
+;       |Register:Register_s5|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s5         ; Register            ; work         ;
+;       |Register:Register_s6|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s6         ; Register            ; work         ;
+;       |Register:Register_s7|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_s7         ; Register            ; work         ;
+;       |Register:Register_sp|                     ; 8 (8)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_sp         ; Register            ; work         ;
+;       |Register:Register_t0|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t0         ; Register            ; work         ;
+;       |Register:Register_t1|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t1         ; Register            ; work         ;
+;       |Register:Register_t2|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t2         ; Register            ; work         ;
+;       |Register:Register_t3|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t3         ; Register            ; work         ;
+;       |Register:Register_t4|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t4         ; Register            ; work         ;
+;       |Register:Register_t5|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t5         ; Register            ; work         ;
+;       |Register:Register_t6|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t6         ; Register            ; work         ;
+;       |Register:Register_t7|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t7         ; Register            ; work         ;
+;       |Register:Register_t8|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t8         ; Register            ; work         ;
+;       |Register:Register_t9|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t9         ; Register            ; work         ;
+;       |Register:Register_v0|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_v0         ; Register            ; work         ;
+;       |Register:Register_v1|                     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_v1         ; Register            ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                           ;
++---------------------------------------------------------------------+----------------------------------------+
+; Register name                                                       ; Reason for Removal                     ;
++---------------------------------------------------------------------+----------------------------------------+
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[0..31] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32                              ;                                        ;
++---------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 9216  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 1024  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 9186  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[16] ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[2]  ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[3]  ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[4]  ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[5]  ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[6]  ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[7]  ; 2       ;
+; RegisterFile:Register_File|Register:Register_sp|DataOutput[28] ; 2       ;
+; PC_Register:ProgramCounter|PCValue[22]                         ; 1       ;
+; Total number of inverted registers = 9                         ;         ;
++----------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MIPS_Processor|PC_Register:ProgramCounter|PCValue[1]                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Processor|PC_Register:ProgramCounter|PCValue[29]                        ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Processor|PC_Register:ProgramCounter|PCValue[2]                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MuxPC|MUX_Output[31]                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MuxRa|MUX_Output[0]                           ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1|Mux25 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2|Mux20 ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux16                                 ;
+; 20:1               ; 14 bits   ; 182 LEs       ; 98 LEs               ; 84 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux31                                 ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 14 LEs               ; 6 LEs                  ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux14                                 ;
+; 16:1               ; 14 bits   ; 140 LEs       ; 98 LEs               ; 42 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux6                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_Processor ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; MEMORY_DEPTH   ; 1024  ; Signed Integer                                        ;
+; PC_INCREMENT   ; 4     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC_Register:ProgramCounter ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ProgramMemory:ROMProgramMemory ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; MEMORY_DEPTH   ; 1024  ; Signed Integer                                     ;
+; DATA_WIDTH     ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Adder32bits:PC_Puls_4 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; NBits          ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForRTypeAndIType ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; NBits          ; 5     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_Zero ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
+; start          ; 0     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_at ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a3 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t3 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t4 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t5 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t6 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t7 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s3 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s4 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s5 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s6 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s7 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t8 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t9 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k0 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_gp ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_sp ;
++----------------+----------------------------------+------------------------------------------+
+; Parameter Name ; Value                            ; Type                                     ;
++----------------+----------------------------------+------------------------------------------+
+; N              ; 32                               ; Signed Integer                           ;
+; start          ; 00010000000000010000000011111100 ; Unsigned Binary                          ;
++----------------+----------------------------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_fp ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_ra ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                      ;
+; start          ; 0     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndInmediate ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DataMemory:RAM ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                     ;
+; MEMORY_DEPTH   ; 256   ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndALUResult ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Adder32bits:Add_ShiftBranch ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:Mux_AddBranch ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MuxForJump ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; NBits          ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MuxRa ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; NBits          ; 5     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MuxPC ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; NBits          ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexer2to1:MuxPCJR ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; NBits          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplexer2to1:MuxRa"                                                                                                                                                                       ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; MUX_Data1       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; MUX_Data1[4..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Multiplexer2to1:MuxForJump" ;
++-----------------+-------+----------+-------------------+
+; Port            ; Type  ; Severity ; Details           ;
++-----------------+-------+----------+-------------------+
+; MUX_Data1[1..0] ; Input ; Info     ; Stuck at GND      ;
++-----------------+-------+----------+-------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterFile:Register_File|Register:Register_Zero" ;
++-----------+-------+----------+------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                        ;
++-----------+-------+----------+------------------------------------------------+
+; DataInput ; Input ; Info     ; Stuck at GND                                   ;
++-----------+-------+----------+------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "Adder32bits:PC_Puls_4" ;
++--------------+-------+----------+-----------------+
+; Port         ; Type  ; Severity ; Details         ;
++--------------+-------+----------+-----------------+
+; Data1[31..3] ; Input ; Info     ; Stuck at GND    ;
+; Data1[1..0]  ; Input ; Info     ; Stuck at GND    ;
+; Data1[2]     ; Input ; Info     ; Stuck at VCC    ;
++--------------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 74                          ;
+; cycloneiii_ff         ; 9216                        ;
+;     CLR               ; 26                          ;
+;     CLR SLD           ; 4                           ;
+;     ENA               ; 8192                        ;
+;     ENA CLR           ; 994                         ;
+; cycloneiii_lcell_comb ; 7594                        ;
+;     arith             ; 90                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 60                          ;
+;     normal            ; 7504                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 392                         ;
+;         4 data inputs ; 7048                        ;
+;                       ;                             ;
+; Max LUT depth         ; 28.00                       ;
+; Average LUT depth     ; 16.26                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:32     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Wed Nov 20 19:42:26 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Processor -c MIPS_Processor
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sources/signextend.v
+    Info (12023): Found entity 1: SignExtend File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/SignExtend.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file sources/shiftleft2.v
+    Info (12023): Found entity 1: ShiftLeft2 File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ShiftLeft2.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file sources/registerfile.v
+    Info (12023): Found entity 1: RegisterFile File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file sources/register.v
+    Info (12023): Found entity 1: Register File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file sources/programmemory.v
+    Info (12023): Found entity 1: ProgramMemory File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file sources/pc_register.v
+    Info (12023): Found entity 1: PC_Register File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/PC_Register.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file sources/orgate.v
+    Info (12023): Found entity 1: ORGate File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ORGate.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sources/muxregisterfile.v
+    Info (12023): Found entity 1: MUXRegisterFile File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MUXRegisterFile.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file sources/multiplexer2to1.v
+    Info (12023): Found entity 1: Multiplexer2to1 File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Multiplexer2to1.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file sources/mips_processor_tb.v
+    Info (12023): Found entity 1: MIPS_Processor_TB File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor_TB.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file sources/mips_processor.v
+    Info (12023): Found entity 1: MIPS_Processor File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file sources/decoderregisterfile.v
+    Info (12023): Found entity 1: DecoderRegisterFile File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file sources/datamemory.v
+    Info (12023): Found entity 1: DataMemory File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file sources/control.v
+    Info (12023): Found entity 1: Control File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Control.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file sources/andgate.v
+    Info (12023): Found entity 1: ANDGate File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ANDGate.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file sources/alucontrol.v
+    Info (12023): Found entity 1: ALUControl File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALUControl.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file sources/alu.v
+    Info (12023): Found entity 1: ALU File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file sources/adder32bits.v
+    Info (12023): Found entity 1: Adder32bits File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Adder32bits.v Line: 13
+Info (12127): Elaborating entity "MIPS_Processor" for the top level hierarchy
+Info (12128): Elaborating entity "Control" for hierarchy "Control:ControlUnit" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 110
+Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:ProgramCounter" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 120
+Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:ROMProgramMemory" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 130
+Warning (10850): Verilog HDL warning at ProgramMemory.v(34): number of words (53) in memory file does not match the number of elements in the address range [0:1023] File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v Line: 34
+Warning (10030): Net "rom.data_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v Line: 30
+Warning (10030): Net "rom.waddr_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v Line: 30
+Warning (10030): Net "rom.we_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v Line: 30
+Info (12128): Elaborating entity "Adder32bits" for hierarchy "Adder32bits:PC_Puls_4" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 138
+Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_ForRTypeAndIType" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 154
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Register_File" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 171
+Info (12128): Elaborating entity "DecoderRegisterFile" for hierarchy "RegisterFile:Register_File|DecoderRegisterFile:Decoder" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v Line: 42
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_Zero" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v Line: 58
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_sp" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v Line: 411
+Info (12128): Elaborating entity "MUXRegisterFile" for hierarchy "RegisterFile:Register_File|MUXRegisterFile:MUXRegister1" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v Line: 483
+Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SignExtendForConstants" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 178
+Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_ForReadDataAndInmediate" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 194
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ArithmeticLogicUnitControl" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 204
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ArithmeticLogicUnit" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 217
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(55): variable "shamt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v Line: 55
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(57): variable "shamt" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v Line: 57
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:RAM" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 232
+Info (12128): Elaborating entity "ShiftLeft2" for hierarchy "ShiftLeft2:shiftBranch" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 258
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/MIPSProjects/MIPSProcessor_Practica2FINAL/db/MIPS_Processor.ram0_ProgramMemory_3ae3c20b.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (276014): Found 3 instances of uninferred RAM logic
+    Info (276013): RAM logic "ProgramMemory:ROMProgramMemory|rom" is uninferred because MIF is not supported for the selected family File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v Line: 30
+    Info (276007): RAM logic "DataMemory:RAM|ram" is uninferred due to asynchronous read logic File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v Line: 26
+    Info (276013): RAM logic "RegisterFile:Register_File|DecoderRegisterFile:Decoder|Ram0" is uninferred because MIF is not supported for the selected family File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v Line: 20
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/MIPSProjects/MIPSProcessor_Practica2FINAL/db/MIPS_Processor.ram0_ProgramMemory_3ae3c20b.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v Line: 31
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PortOut[0]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[1]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[2]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[3]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[4]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[5]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[6]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[7]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[8]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[9]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[10]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[11]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[12]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[13]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[14]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[15]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[16]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[17]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[18]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[19]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[20]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[21]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[22]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[23]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[24]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[25]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[26]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[27]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[28]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[29]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[30]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+    Warning (13410): Pin "PortOut[31]" is stuck at GND File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 40
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "PortIn[0]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[1]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[2]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[3]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[4]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[5]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[6]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+    Warning (15610): No output dependent on input pin "PortIn[7]" File: C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v Line: 36
+Info (21057): Implemented 16843 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 16769 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Wed Nov 20 19:43:19 2019
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:00:56
+
+

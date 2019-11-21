@@ -1,0 +1,18 @@
+Fitter Status : Successful - Wed Nov 20 19:59:22 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : MIPS_Processor
+Top-level Entity Name : MIPS_Processor
+Family : MAX 10
+Device : 10M16DAF256A7G
+Timing Models : Final
+Total logic elements : 12,506 / 15,840 ( 79 % )
+    Total combinational functions : 7,594 / 15,840 ( 48 % )
+    Dedicated logic registers : 9,216 / 15,840 ( 58 % )
+Total registers : 9216
+Total pins : 74 / 178 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 0 / 562,176 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 90 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )

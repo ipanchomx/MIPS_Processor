@@ -1,0 +1,406 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/MIPSProjects/MIPSProcessor/Sources
+vAdder32bits
+Z0 !s110 1574300481
+!i10b 1
+!s100 ]H0^NRAm[`J07LMS2@]Pb2
+I[:BzXAQFH=Z]RinCa_C@[1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources
+w1419780579
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Adder32bits.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Adder32bits.v
+Z3 L0 13
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1574300481.000000
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Adder32bits.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Adder32bits.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@adder32bits
+vALU
+Z8 !s110 1574300483
+!i10b 1
+!s100 gOC:fMPi7@URH;Eo6DO^82
+I75noKNg2Q_m@A`mCjLMH71
+R1
+R2
+w1573846941
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v
+L0 20
+R4
+r1
+!s85 0
+31
+Z9 !s108 1574300483.000000
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALU.v|
+!i113 1
+R6
+R7
+n@a@l@u
+vALUControl
+R8
+!i10b 1
+!s100 L>e^GRAeXkW>4PBP3?@>i0
+I5L[fPFW2f_>I]]KTlVU?L2
+R1
+R2
+w1574150097
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALUControl.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALUControl.v
+Z10 L0 15
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALUControl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ALUControl.v|
+!i113 1
+R6
+R7
+n@a@l@u@control
+vANDGate
+R8
+!i10b 1
+!s100 =@O=aQRi;bazk13J6U>4m3
+I3kXe6<_Zj9LEdhednN=?K2
+R1
+R2
+w1419780594
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ANDGate.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ANDGate.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ANDGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ANDGate.v|
+!i113 1
+R6
+R7
+n@a@n@d@gate
+vControl
+R8
+!i10b 1
+!s100 P[AfQ:ab4Qabf=3HIoA`f2
+I^DiQ[5XdH0]MViHU345FA1
+R1
+R2
+w1574150096
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Control.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Control.v
+Z11 L0 14
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Control.v|
+!i113 1
+R6
+R7
+n@control
+vDataMemory
+Z12 !s110 1574300484
+!i10b 1
+!s100 [m9iikRR:k^>lh]VA2?Pm3
+IEac2lK82Ye3hJ;5:Qo3dW0
+R1
+R2
+w1574300470
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v
+R3
+R4
+r1
+!s85 0
+31
+Z13 !s108 1574300484.000000
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DataMemory.v|
+!i113 1
+R6
+R7
+n@data@memory
+vDecoderRegisterFile
+R12
+!i10b 1
+!s100 WiBBY1;C0OC:8`V5m[Rn51
+I:n`zmQ]oKDVkGBTLNz1><0
+R1
+R2
+w1419780743
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v
+Z14 L0 12
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/DecoderRegisterFile.v|
+!i113 1
+R6
+R7
+n@decoder@register@file
+vMIPS_Processor
+R12
+!i10b 1
+!s100 DXb74[lOW:CZDUaaOH8LW0
+I9i>P98P:37PQa[M_g`<A32
+R1
+R2
+w1574193713
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v
+L0 26
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor.v|
+!i113 1
+R6
+R7
+n@m@i@p@s_@processor
+vMIPS_Processor_TB
+R12
+!i10b 1
+!s100 93:RClE5YGZRK?HHmQNoS0
+IPTd;QgO:n95=;YXLBmAQ^3
+R1
+R2
+w1465771738
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor_TB.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor_TB.v
+R10
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MIPS_Processor_TB.v|
+!i113 1
+R6
+R7
+n@m@i@p@s_@processor_@t@b
+vMultiplexer2to1
+R12
+!i10b 1
+!s100 F48Y>?kNP3VGSJ<6PZ3Z<0
+I1^T?V52P8TMZC[La64`8C1
+R1
+R2
+w1419780640
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Multiplexer2to1.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Multiplexer2to1.v
+R3
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Multiplexer2to1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Multiplexer2to1.v|
+!i113 1
+R6
+R7
+n@multiplexer2to1
+vMUXRegisterFile
+R12
+!i10b 1
+!s100 <^j`[[]Fjj[]CWW`3JSFT0
+IP=]5lg?DW54nXYD1@YYAA1
+R1
+R2
+w1392863324
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MUXRegisterFile.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MUXRegisterFile.v
+L0 2
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MUXRegisterFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/MUXRegisterFile.v|
+!i113 1
+R6
+R7
+n@m@u@x@register@file
+vORGate
+R12
+!i10b 1
+!s100 JNj>BKoL1_mnR=J7TK0NZ0
+IALU]CXVA9XVoaGR8:fVGB2
+R1
+R2
+w1573865316
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ORGate.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ORGate.v
+L0 1
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ORGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ORGate.v|
+!i113 1
+R6
+R7
+n@o@r@gate
+vPC_Register
+R12
+!i10b 1
+!s100 cfHD1UD;S4NOcLm9kzj`92
+I`kzzd6FT5@OFIhHjb`Yi92
+R1
+R2
+w1573932879
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/PC_Register.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/PC_Register.v
+R10
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/PC_Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/PC_Register.v|
+!i113 1
+R6
+R7
+n@p@c_@register
+vProgramMemory
+R12
+!i10b 1
+!s100 O7W^Kc4a=X2TYFYYgiff?2
+I?g8;TH@>PdN3n^RC1Kn^J3
+R1
+R2
+w1573932877
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v
+R10
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ProgramMemory.v|
+!i113 1
+R6
+R7
+n@program@memory
+vRegister
+R12
+!i10b 1
+!s100 7R?QfgMh1Qmd4T83OeI<I3
+IkEEY]m@2Q[Q>fO7JUJ^`43
+R1
+R2
+w1574300022
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v
+R14
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/Register.v|
+!i113 1
+R6
+R7
+n@register
+vRegisterFile
+R12
+!i10b 1
+!s100 b:Sz4RC]WzSANV8PG1>E01
+Ioa:3z0Y8LFElJ`5046fIi2
+R1
+R2
+w1574300020
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v
+R10
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/RegisterFile.v|
+!i113 1
+R6
+R7
+n@register@file
+vShiftLeft2
+R12
+!i10b 1
+!s100 Hi:hlBR22G;<919E5iIcC3
+I<C392Vi8:d@b;7ZBAIXQU1
+R1
+R2
+w1419780687
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ShiftLeft2.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ShiftLeft2.v
+R14
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ShiftLeft2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/ShiftLeft2.v|
+!i113 1
+R6
+R7
+n@shift@left2
+vSignExtend
+R0
+!i10b 1
+!s100 I1D7fe4B<UD12_E`@TC:T3
+Iz=3:75I<JeK?4W<F?EINX1
+R1
+R2
+w1419780694
+8C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/SignExtend.v
+FC:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/SignExtend.v
+R11
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/SignExtend.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/MIPSProjects/MIPSProcessor_Practica2FINAL/Sources/SignExtend.v|
+!i113 1
+R6
+R7
+n@sign@extend
